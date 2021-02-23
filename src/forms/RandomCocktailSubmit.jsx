@@ -1,5 +1,5 @@
 import React from 'react';
-import RandomCocktailList from '../components/randomCocktails';
+import RandomCocktailList from '../components/randomCocktails/RandomCocktailList';
 import { useRandom } from '../hooks/Random';
 
 const RandomCocktailSubmit = () => {
@@ -13,3 +13,5 @@ const RandomCocktailSubmit = () => {
     </div>
   );
 };
+
+export default RandomCocktailSubmit;

@@ -7,7 +7,19 @@ export const fetchRandomCocktail = () => {
     },
   })
     .then((res) => res.json())
-
+    .then((drinks) =>
+      drinks.drinks.map((drink) => ({
+        name: drink.strDrink,
+        glass: drink.strGlass,
+        recipe: drink.strInstructions,
+        ingredient1: drink.strIngredient1,
+        measure1: drink.strMeasure1,
+        ingredient2: drink.strIngredient2,
+        measure2: drink.strMeasure2,
+        ingredient3: drink.strIngredient3,
+        measure3: drink.strMeasure3,
+      }))
+    )
     .catch((err) => {
       console.error(err);
     });
