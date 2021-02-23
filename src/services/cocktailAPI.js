@@ -1,4 +1,4 @@
-export const getRandomCocktail = () => {
+export const fetchRandomCocktail = () => {
   return fetch('https://the-cocktail-db.p.rapidapi.com/random.php', {
     method: 'GET',
     headers: {
@@ -6,9 +6,8 @@ export const getRandomCocktail = () => {
       'x-rapidapi-host': 'the-cocktail-db.p.rapidapi.com',
     },
   })
-    .then((response) => {
-      console.log(response);
-    })
+    .then((res) => res.json())
+
     .catch((err) => {
       console.error(err);
     });
