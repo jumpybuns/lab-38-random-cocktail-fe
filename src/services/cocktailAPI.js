@@ -26,3 +26,11 @@ export const fetchRandomCocktail = () => {
       console.error(err);
     });
 };
+
+export const fetchUserCocktails = () => {
+  fetch('https://protected-fjord-40366.herokuapp.com/api/v1/cocktails')
+    .then((res) => res.json())
+    .catch((err) => {
+      console.error(err);
+    });
+};
