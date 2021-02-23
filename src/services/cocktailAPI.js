@@ -18,6 +18,8 @@ export const fetchRandomCocktail = () => {
         measure2: drink.strMeasure2,
         ingredient3: drink.strIngredient3,
         measure3: drink.strMeasure3,
+        ingredient4: drink.strIngredient4,
+        measure4: drink.strMeasure4,
       }))
     )
     .catch((err) => {
