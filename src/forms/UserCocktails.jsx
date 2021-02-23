@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCocktailList from '../components/cocktails/UserCocktails';
+import UserCocktailList from '../components/cocktails/UserCocktailList';
 import { useCocktails } from '../hooks/Cocktail.js';
 
 const UserCocktails = () => {
