@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import UserCocktail from './UserCocktail';
 
 const UserCocktailList = ({ userCocktails }) => {
+  console.log(userCocktails);
   const cocktailElements = userCocktails.map((cocktail) => (
     <li key={cocktail.id}>
       <UserCocktail {...cocktail} />

@@ -32,6 +32,7 @@ export const fetchUserCocktails = () => {
     .then((res) => res.json())
     .then((drinks) =>
       drinks.drinks.map((drink) => ({
+        id: drink.id,
         name: drink.strDrink,
         glass: drink.strGlass,
         recipe: drink.strInstructions,
@@ -48,4 +49,13 @@ export const fetchUserCocktails = () => {
     .catch((err) => {
       console.error(err);
     });
+};
+
+export const submitUserCocktail = () => {
+  return fetch('https://protected-fjord-40366.herokuapp.com/api/v1/cocktails', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((res) => res.json());
 };

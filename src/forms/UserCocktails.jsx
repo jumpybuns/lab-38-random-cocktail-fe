@@ -3,11 +3,14 @@ import UserCocktailList from '../components/cocktails/UserCocktailList';
 import { useCocktails } from '../hooks/Cocktail.js';
 
 const UserCocktails = () => {
-  const { userCocktails } = useCocktails();
+  const { userCocktails, handleSubmit } = useCocktails();
 
   return (
     <div>
-      <UserCocktailList userCocktails={userCocktails} />
+      <form>
+        <button onClick={handleSubmit}>User Cocktail Menu</button>
+        <UserCocktailList userCocktails={userCocktails} />
+      </form>
     </div>
   );
 };

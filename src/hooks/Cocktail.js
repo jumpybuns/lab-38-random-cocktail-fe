@@ -3,11 +3,10 @@ import { fetchUserCocktails } from '../services/cocktailAPI';
 
 export const useCocktails = () => {
   const [userCocktails, setUserCocktails] = useState([]);
-  const [getUserCocktails, setGetUserCocktails] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchUserCocktails(getUserCocktails).then((userCocktails) => {
+    fetchUserCocktails().then((userCocktails) => {
       setUserCocktails(userCocktails);
     });
   };
@@ -15,6 +14,5 @@ export const useCocktails = () => {
   return {
     handleSubmit,
     userCocktails,
-    setGetUserCocktails,
   };
 };
